@@ -1,0 +1,206 @@
+{
+  "clients": [
+    {
+      "name": "Youssef1",
+      "email": "YoussefMasmodui@gmail.com",
+      "password": "123456",
+      "createdDate": "2024-05-13T23:00:00.000Z",
+      "id": "a200"
+    },
+    {
+      "id": "04b6",
+      "name": "saif",
+      "email": "saif@gmail.com",
+      "password": "123456",
+      "createdDate": "2024-05-16T23:00:00.000Z"
+    },
+    {
+      "id": "cc25",
+      "name": "Amina",
+      "email": "Amina@gmail.com",
+      "password": "123456",
+      "createdDate": "2024-05-14T23:00:00.000Z"
+    },
+    {
+      "id": "0oef5d3w0",
+      "name": "Aziz",
+      "email": "Aziz@gmail.com",
+      "password": "123456",
+      "createdDate": "2025-04-22T19:29:04.320Z"
+    }
+  ],
+  "salles": [
+    {
+      "id": "1",
+      "name": "salle 1",
+      "capacite": "10",
+      "prix": "123",
+      "description": "salle de sous commission pour 10 personnes",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8wxf4jTURKg69oJc4-_Sjd1dzg3ygiUJKb1NwY7H3U7MtdFlUKZQIAwnvj0pbFXBSZ8lEmLbCrKuuFO_wd20iOSskFJi3N73JtJjo9A_4hWUoQdWwy8HdpVMUTBv4yD4ZFdkJ-o_ybj31/s1280/trouver-salle-conference-paris.jpg"
+    },
+    {
+      "name": "salle 2",
+      "capacite": "100",
+      "prix": "1234",
+      "description": "salle polyvalente de conférences pour 100 personnes",
+      "image": "https://raconterlavie.fr/wp-content/uploads/2021/03/conference-hall-2.jpg",
+      "id": "2"
+    },
+    {
+      "id": "4",
+      "name": "salle 4",
+      "capacite": "500",
+      "prix": "123",
+      "description": "Une salle de commission pour 500 personnes",
+      "image": "https://www.uneca.org/sites/default/files/UNCC/images/Conference%20Room%201-CR1.jpg"
+    },
+    {
+      "name": "Salle Luxe",
+      "capacite": "30",
+      "prix": "2500",
+      "description": "Salle luxe",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDvYTFfGUHG_A-WfGYR-r58YPKM_6gdOKcK3wzgSRKRw&s",
+      "id": "20eb"
+    },
+    {
+      "name": "salle séminaire",
+      "capacite": "25",
+      "prix": "200",
+      "description": "Top salle pour séminaire",
+      "image": "https://privateaser-media.s3.eu-west-1.amazonaws.com/etab_photos/3649/450x300/4769.jpg",
+      "id": "b4d3"
+    },
+    {
+      "id": "375b",
+      "name": "aaaaaaaaaaaa",
+      "capacite": "1111111",
+      "prix": "123a",
+      "description": "aaaaaaaaaaaa",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8wxf4jTURKg69oJc4-_Sjd1dzg3ygiUJKb1NwY7H3U7MtdFlUKZQIAwnvj0pbFXBSZ8lEmLbCrKuuFO_wd20iOSskFJi3N73JtJjo9A_4hWUoQdWwy8HdpVMUTBv4yD4ZFdkJ-o_ybj31/s1280/trouver-salle-conference-paris.jpg"
+    },
+    {
+      "id": "e22d",
+      "name": "Zara Hadid",
+      "capacite": "20",
+      "prix": "50",
+      "description": "Salle dans L'iit",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8wxf4jTURKg69oJc4-_Sjd1dzg3ygiUJKb1NwY7H3U7MtdFlUKZQIAwnvj0pbFXBSZ8lEmLbCrKuuFO_wd20iOSskFJi3N73JtJjo9A_4hWUoQdWwy8HdpVMUTBv4yD4ZFdkJ-o_ybj31/s1280/trouver-salle-conference-paris.jpg"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "e1b8",
+      "dateDebut": "2024-05-14T23:00:00.000Z",
+      "dateFin": "2024-05-15T23:00:00.000Z",
+      "clientId": "a200",
+      "salleId": "1"
+    },
+    {
+      "dateDebut": "2024-05-24T23:00:00.000Z",
+      "dateFin": "2024-05-25T23:00:00.000Z",
+      "clientId": "04b6",
+      "salleId": null,
+      "id": "b100"
+    },
+    {
+      "dateDebut": "2024-06-02T23:00:00.000Z",
+      "dateFin": "2024-06-05T23:00:00.000Z",
+      "clientId": null,
+      "salleId": "4",
+      "id": "3c88"
+    },
+    {
+      "id": "d374",
+      "dateDebut": "2024-06-09T23:00:00.000Z",
+      "dateFin": "2024-06-10T23:00:00.000Z",
+      "clientId": "04b6",
+      "salleId": "4"
+    },
+    {
+      "id": "572f",
+      "dateDebut": "2024-06-18T23:00:00.000Z",
+      "dateFin": "2024-06-19T23:00:00.000Z",
+      "clientId": "cc25",
+      "salleId": null
+    },
+    {
+      "dateDebut": "2024-06-03T23:00:00.000Z",
+      "dateFin": "2024-06-04T23:00:00.000Z",
+      "clientId": null,
+      "salleId": null,
+      "id": "157d"
+    },
+    {
+      "id": "4e3e",
+      "dateDebut": "2024-06-02T23:00:00.000Z",
+      "dateFin": "2024-06-03T23:00:00.000Z",
+      "clientId": null,
+      "salleId": "2"
+    },
+    {
+      "id": "318d",
+      "dateDebut": "2025-04-22T23:00:00.000Z",
+      "dateFin": "2025-04-22T23:00:00.000Z",
+      "clientId": "2",
+      "salleId": "2"
+    },
+    {
+      "id": "c581",
+      "dateDebut": "2025-04-21T23:00:00.000Z",
+      "dateFin": "2025-04-23T23:00:00.000Z",
+      "clientId": "3",
+      "salleId": "2"
+    },
+    {
+      "id": "d396",
+      "dateDebut": "2025-04-22T23:00:00.000Z",
+      "dateFin": "2025-04-24T23:00:00.000Z",
+      "clientId": "a200",
+      "salleId": "2"
+    },
+    {
+      "id": "d619",
+      "dateDebut": "2025-04-24T23:00:00.000Z",
+      "dateFin": "2025-04-25T23:00:00.000Z",
+      "clientId": "1",
+      "salleId": "20eb"
+    }
+  ],
+  "emails": [
+    {
+      "id": "e82f",
+      "name": "saif",
+      "email": "saif@gmail.com",
+      "objet": "reclamation",
+      "message": "salle petite"
+    },
+    {
+      "id": "089c",
+      "name": "khadija",
+      "email": "kh@gmail.com",
+      "objet": "reclamation",
+      "message": "nombre de chaise"
+    },
+    {
+      "id": "6645",
+      "name": "sonia",
+      "email": "sonia@gmail.com",
+      "objet": "remerciment",
+      "message": "salle parfaite"
+    },
+    {
+      "id": "7b26",
+      "name": "Farah",
+      "email": "saif@yahoo.fr",
+      "objet": "remerciment ",
+      "message": "Merci"
+    },
+    {
+      "id": "f3a0",
+      "name": "chema",
+      "email": "chema@kallem.com",
+      "objet": "remerciment",
+      "message": "Parfait!"
+    }
+  ]
+}

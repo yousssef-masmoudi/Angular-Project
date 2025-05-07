@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+
+<mat-dialog-content>
+    <form [formGroup]="data.form" class="form-layout">
+        <!-- Render dynamic fields from the parent component -->
+        <ng-container *ngFor="let control of data.form.controls | keyvalue">
+            <mat-form-field class="field" appearance="outline" *ngIf="control.key !== 'createdDate'">
+                <mat-label>{{ control.key | titlecase }}</mat-label>
+                <input matInput [formControlName]="control.key" />
+            </mat-form-field>
+
+            <!-- Special handling for createdDate -->
+            <mat-form-field class="field" appearance="outline" *ngIf="control.key === 'createdDate'">
+                <mat-label>Créée le</mat-label>
+                <input matInput [matDatepicker]="picker" [formControlName]="control.key" />
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </ng-container>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="cancel()">Annuler</button>
+    <button mat-raised-button color="primary" (click)="save()" [disabled]="data.form.invalid">
+        Enregistrer
+    </button>
+</mat-dialog-actions>

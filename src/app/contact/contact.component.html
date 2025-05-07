@@ -1,0 +1,53 @@
+<div class="contact-section py-5">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-10">
+        <div class="row g-5 align-items-center shadow p-4 rounded-4 bg-white">
+          <!-- Left Column -->
+          <div class="col-md-6 text-center text-md-start">
+            <h2 class="fw-bold mb-3">Envoyez-nous un message !</h2>
+            <p class="text-muted mb-4">N'hésitez pas à nous contacter pour toute question ou demande. Nous vous
+              répondrons dans les plus brefs délais.</p>
+            <img src="assets/Images/contact.png" alt="Image de contact" class="img-fluid rounded-3 shadow-sm" />
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <form (ngSubmit)="onSubmit()" [formGroup]="emailForm" class="needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" formControlName="name" placeholder="Votre nom"
+                  required />
+                <label for="name">Votre nom</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Votre email"
+                  required />
+                <label for="email">Votre email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="objet" formControlName="objet" placeholder="Objet"
+                  required />
+                <label for="objet">Objet</label>
+              </div>
+              <div class="form-floating mb-4">
+                <textarea class="form-control" id="message" formControlName="message" style="height: 150px;"
+                  placeholder="Votre message" required></textarea>
+                <label for="message">Votre message</label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary py-2 fs-5">
+                  <i class="bi bi-send-fill me-2"></i>Envoyer
+                </button>
+              </div>
+
+              <div class="mt-3">
+                <div class="alert alert-success p-2" *ngIf="messageSent">Votre message a été envoyé, merci !</div>
+                <div class="alert alert-danger p-2" *ngIf="sendError">Une erreur est survenue, veuillez réessayer.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

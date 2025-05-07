@@ -1,0 +1,22 @@
+.client-card {
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.client-form {
+    display: flex;
+    flex-direction: column;
+}

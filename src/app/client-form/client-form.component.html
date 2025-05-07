@@ -1,0 +1,39 @@
+<mat-card class="client-card">
+  <mat-card-title class="form-title">Créer / Modifier un Client</mat-card-title>
+
+  <form [formGroup]="form" (ngSubmit)="onsub()" class="client-form">
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Nom" formControlName="name" [value]="client?.name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Email" formControlName="email" [value]="client?.email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput type="password" placeholder="Mot de passe" formControlName="password"
+        [value]="client?.password" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Date de création</mat-label>
+      <input matInput [matDatepicker]="pickerDebut" placeholder="Date" formControlName="createdDate"
+        [value]="client?.createdDate" />
+      <mat-datepicker-toggle matSuffix [for]="pickerDebut"></mat-datepicker-toggle>
+      <mat-datepicker #pickerDebut></mat-datepicker>
+    </mat-form-field>
+
+    <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="end">
+      <button mat-raised-button type="submit" color="primary">
+        <mat-icon>check_circle</mat-icon> Valider
+      </button>
+      <button routerLink="/client" mat-raised-button color="warn">
+        <mat-icon>arrow_back</mat-icon> Retour
+      </button>
+    </div>
+  </form>
+</mat-card>

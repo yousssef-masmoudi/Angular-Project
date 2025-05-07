@@ -1,0 +1,29 @@
+.salle-card {
+    margin: 20px;
+    padding: 20px;
+}
+
+.salle-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.salle-actions {
+    margin: 20px 0;
+}
+
+.filter-field {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.table-wrapper {
+    overflow: auto;
+    max-height: 70vh;
+}
+
+.salle-table {
+    width: 100%;
+    min-width: 600px;
+}

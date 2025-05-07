@@ -1,0 +1,36 @@
+<br>
+<h2 mat-dialog-title>Réservez Votre Salle</h2>
+<br>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" mat-dialog-content>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Date Début</mat-label>
+    <input matInput [matDatepicker]="pickerDebut" placeholder="Date Début" formControlName="dateDebut">
+    <mat-datepicker-toggle matSuffix [for]="pickerDebut"></mat-datepicker-toggle>
+    <mat-datepicker #pickerDebut></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Date Fin</mat-label>
+    <input matInput [matDatepicker]="pickerFin" placeholder="Date Fin" formControlName="dateFin">
+    <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+    <mat-datepicker #pickerFin></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Client ID</mat-label>
+    <input matInput placeholder="Client ID" formControlName="clientId">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Salle ID</mat-label>
+    <input matInput placeholder="Salle ID" formControlName="salleId" readonly>
+  </mat-form-field>
+</form>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Annuler</button>
+  <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="onSubmit()">Réserver</button>
+</div>
+<br><br> 
+<h4 style="color: rgb(234, 73, 73);">"Si vous n'avez pas d'identifiant.Vous devez créer un compte!"</h4>

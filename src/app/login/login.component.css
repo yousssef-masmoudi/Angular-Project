@@ -1,0 +1,120 @@
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/Images/1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #1f1b1e;
+}
+
+.login-card {
+	width: 420px;
+	padding: 40px;
+	background: rgba(255, 255, 255, 0.95);
+	
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	border-radius: 12px;
+	text-align: center;
+}
+
+.login-header {
+	margin-bottom: 30px;
+}
+
+.login-header .mat-card-title {
+	font-size: 28px;
+	font-weight: 500;
+	color: #000; /* Change to black */
+	margin-bottom: 8px;
+}
+
+.subtitle {
+	color: #333; /* Dark gray color */
+	font-size: 14px;
+	margin: 0;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-field {
+	width: 100%;
+}
+
+.mat-form-field-outline {
+	color: rgba(0, 0, 0, 0.1);
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+	color: #3f51b5;
+}
+
+.login-button {
+	margin-top: 10px;
+}
+
+.submit-button {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 6px;
+}
+
+.submit-button mat-icon {
+	margin-left: 8px;
+	font-size: 20px;
+}
+
+.forgot-password {
+	text-align: right;
+	margin-top: -15px;
+}
+
+
+.form-field{
+	border-radius: 1%;
+	border-color: #333;
+}
+.title,.label{
+	color: #333;
+}
+/* Add these styles to your existing CSS */
+
+/* Make input field borders match login button color */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+	color: #3f51b5;
+}
+
+/* Make the outline thicker when focused */
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+	color: #3f51b5;
+}
+
+/* Make form icons match login button color */
+.form-icon {
+	color: #3f51b5;
+}
+
+/* Make the input text color dark for better readability */
+.mat-input-element {
+	color: rgba(0, 0, 0, 0.87);
+}
+
+/* Optional: Make the label float above match the color too */
+.mat-form-field.mat-focused .mat-form-field-label {
+	color: #3f51b5;
+}

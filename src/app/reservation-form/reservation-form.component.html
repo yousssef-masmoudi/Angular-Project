@@ -1,0 +1,44 @@
+<br>
+<h1>Create/edit reservation</h1>
+<br>
+<form [formGroup]="form" (ngSubmit)="onsub()">
+  <mat-form-field style="width: 100%;">
+    <mat-label>Date Début</mat-label>
+    <input matInput [matDatepicker]="pickerDebut" placeholder="Date Début" formControlName="dateDebut" [value]="reservation?.dateDebut">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+
+    <mat-datepicker-toggle matSuffix [for]="pickerDebut"></mat-datepicker-toggle>
+    <mat-datepicker #pickerDebut></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Date Fin</mat-label>
+    <input matInput [matDatepicker]="pickerFin" placeholder="Date Fin" formControlName="dateFin" [value]="reservation?.dateFin">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+    <mat-datepicker #pickerFin></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Client</mat-label>
+    <mat-select formControlName="clientId" [value]="reservation?.clientId">
+      <mat-option *ngFor="let client of clients" [value]="client.id">
+        {{ client.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field style="width: 100%;">
+    <mat-label>Salle</mat-label>
+    <mat-select formControlName="salleId" [value]="reservation?.salleId">
+      <mat-option *ngFor="let salle of salles" [value]="salle.id">
+        {{ salle.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutGap="16px">
+    <button mat-raised-button type="submit" color="primary">Submit</button>
+    <button routerLink="/reservation" mat-raised-button color="warn">Retour</button> 
+   </div>
+</form>

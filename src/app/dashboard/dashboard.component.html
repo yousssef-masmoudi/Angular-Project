@@ -1,0 +1,78 @@
+<!-- DASHBOARD TEMPLATE -->
+<div class="mgCar">
+  <mat-card class="stat-card col1">
+    <mat-card-header>
+      <mat-icon>meeting_room</mat-icon>
+      <mat-card-title>Salles</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>{{ nb_Salles }}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="stat-card col2">
+    <mat-card-header>
+      <mat-icon>people</mat-icon>
+      <mat-card-title>Clients</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>{{ nb_clients }}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="stat-card col3">
+    <mat-card-header>
+      <mat-icon>event</mat-icon>
+      <mat-card-title>Réservations</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>{{ nb_reservation }}</h2>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- Charts -->
+<div class="charts-section">
+  <mat-card class="chart-wrapper">
+    <mat-card-header>
+      <mat-icon class="chart-icon">pie_chart</mat-icon>
+      <mat-card-title>Répartition des salles</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas baseChart [type]="'pie'" [datasets]="chartDatapie" [labels]="chartLabelspie"
+        [options]="{ responsive: true }">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="chart-wrapper">
+    <mat-card-header>
+      <mat-card-title>Nombre de salles</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas baseChart [type]="'bar'" [datasets]="chartDatabar" [labels]="chartLabelsbar"
+        [options]="{ responsive: true }">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="chart-wrapper tailLine">
+    <mat-card-header>
+      <mat-card-title>Réservations par client</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas baseChart [type]="'line'" [datasets]="chartDataLine" [labels]="chartLabelsLine" [options]="{
+                responsive: true,
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Réservations par utilisateur'
+                  }
+                }
+              }">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

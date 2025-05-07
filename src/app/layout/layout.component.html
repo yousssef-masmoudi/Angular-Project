@@ -1,0 +1,50 @@
+<mat-sidenav-container>
+  <!-- The side nav -->
+  <mat-sidenav #sidenav fixedInViewport="true" mode="side" [opened]="(authService.getRole() | async) === 'admin'" style="width: 230px;">
+    <mat-toolbar color="primary" fxLayout fxLayoutGap="16px">
+      <mat-icon>business</mat-icon>
+      <span>ReservePlus</span>
+    </mat-toolbar>
+    <mat-nav-list *ngIf="(authService.getRole() | async) === 'admin'">
+      <a mat-list-item routerLink="/dashboard"><mat-icon>settings</mat-icon><span>Dashboard</span></a>
+      <a mat-list-item routerLink="/client"><mat-icon>supervised_user_circle</mat-icon><span>Clients</span></a>
+      <a mat-list-item routerLink="/salle"><mat-icon>meeting_room</mat-icon><span>Salle de Conference</span></a>
+      <a mat-list-item routerLink="/reservation"><mat-icon>events</mat-icon><span>Reservation</span></a>
+      <a mat-list-item routerLink="/boite-reception"><mat-icon>email</mat-icon><span>Messagerie</span></a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main content -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <button type="button" aria-label="Toggle sidenav" 
+                *ngIf="(authService.getRole() | async) === 'admin'"
+                mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-icon-button color="white" routerLink="/">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button color="white" routerLink="/contact">
+          <mat-icon>email</mat-icon>
+        </button>
+      </div>
+      <div fxFlex></div>
+      <div fxFlex fxLayout="row" fxLayoutAlign="end center">
+        <button mat-icon-button color="white"
+                routerLink="/login" *ngIf="!(authService.getUser() | async)">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <button mat-icon-button color="white"
+                (click)="logout()" *ngIf="(authService.getUser() | async)">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+
+    <div class="content mt-80 mx-16">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

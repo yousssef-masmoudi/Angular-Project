@@ -1,0 +1,40 @@
+.create {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 30px;
+
+}
+
+.salle-container {
+  margin: 20px;
+  padding: 20px;
+}
+
+.salle-header {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.salle-table {
+  width: 100%;
+}
+
+.action-buttons {
+  white-space: nowrap;
+}
+
+.action-buttons button {
+  margin-right: 8px;
+}
+
+.mat-column-actions {
+  width: 100px;
+}
+
+:host ::ng-deep .mat-form-field-wrapper {
+  margin-bottom: 0;
+}

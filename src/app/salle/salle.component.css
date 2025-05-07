@@ -1,0 +1,31 @@
+.salle-container {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 95%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.salle-header {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-image {
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.salle-table th,
+.salle-table td {
+  text-align: left;
+  padding: 12px;
+}
+
+.action-buttons button {
+  margin-right: 8px;
+}

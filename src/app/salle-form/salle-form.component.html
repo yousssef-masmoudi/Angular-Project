@@ -1,0 +1,33 @@
+<h2>Create/modifier salle</h2>
+
+<form [formGroup]="form" (ngSubmit)="onsub()">
+  <mat-form-field style="width: 100%;">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Name" formControlName="name" [value]="salle?.name">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Capacity</mat-label>
+    <input matInput placeholder="Capacity" formControlName="capacite" [value]="salle?.capacite">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Price</mat-label>
+    <input matInput placeholder="Price" formControlName="prix" [value]="salle?.prix">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Description</mat-label>
+    <input matInput placeholder="Description" formControlName="description" [value]="salle?.description">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Image</mat-label>
+    <input matInput placeholder="Image" formControlName="image" [value]="salle?.image">
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutGap="16px">
+    <button mat-raised-button type="submit" color="primary">Submit</button>
+    <button routerLink="/salle" mat-raised-button color="warn">Retour</button> 
+   </div>
+</form>

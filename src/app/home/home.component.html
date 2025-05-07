@@ -1,0 +1,64 @@
+<header class="header">
+  <div class="header-content">
+    <h1 class="h1">Bienvenue sur <span class="highlight">ReservePlus</span></h1>
+    <p class="p">
+      Votre destination de choix pour la réservation de salles de conférence et de séminaires professionnels.<br>
+      Découvrez une variété d'espaces modernes et entièrement équipés pour vos réunions, formations, ou événements
+      professionnels.
+    </p>
+  </div>
+</header>
+
+<div class="card-container">
+  <mat-card class="salle-card" *ngFor="let salle of dataSource" [@cardHoverAnimation] (click)="openDetailsModal(salle)"
+    style="cursor: pointer;">
+
+    <mat-card-header>
+      <mat-card-subtitle>{{ salle.name }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="salle.image" alt="Image de {{ salle.name }}">
+
+    <mat-card-content>
+      <p>Si vous voulez Reserver {{ salle.name }} clickez sur le button si dissus </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openHomeFormModal()">Réserver</button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="company-info">
+      <h3>À propos de nous</h3>
+      <p>Brief description of your company and its activities.</p>
+    </div>
+    <div class="useful-links">
+      <h3>Liens utiles</h3>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/about">À propos</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="social-media">
+      <h3>Nous suivre</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/votrepage"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://www.instagram.com/votrecompte"><i class="fab fa-instagram"></i>Instagram</a></li>
+      </ul>
+    </div>
+    <div class="contact-info">
+      <h3>Contact</h3>
+      <ul>
+        <li><i class="fas fa-envelope"></i> contact@example.com</li>
+        <li><i class="fas fa-phone"></i> 01 23 45 67 89</li>
+        <li><i class="fas fa-map-marker-alt"></i> 123, Rue de la Réunion, Ville, Pays</li>
+      </ul>
+    </div>
+  </div>
+</footer>
