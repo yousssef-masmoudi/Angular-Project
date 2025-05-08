@@ -1,31 +1,112 @@
+/* Conteneur principal de la page de messagerie */
 .boite-reception-container {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header {
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.table-card {
-  width: 100%;
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: #fff;
   max-width: 1200px;
-  overflow-x: auto;
-  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* En-tête du tableau */
+.header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3F51B5; /* Bleu Indigène */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Style de la carte contenant le tableau */
+.table-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* Table - Base style */
 .full-width-table {
   width: 100%;
-  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: auto;
 }
 
+/* En-tête des cellules de la table */
+.mat-header-cell {
+  background-color: #F5F7FA;
+  color: #3F51B5;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+/* Cellules du tableau */
+.mat-cell {
+  padding: 12px 16px;
+  color: #333;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+/* Survol de ligne */
+.mat-row:hover {
+  background-color: #E3F2FD; /* Survol léger pour les lignes */
+}
+
+/* Cellule de message avec contenu long */
 .message-cell {
-  max-height: 100px;
-  overflow-y: auto;
-  white-space: pre-line;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Icônes d'action (suppression) */
+button[mat-icon-button] {
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+  padding: 8px;
+}
+
+/* Survol des boutons */
+button[mat-icon-button]:hover {
+  background-color: #FFEBEE; /* Survol agréable et doux */
+  border-radius: 50%;
+}
+
+/* Icones de suppression */
+button[mat-icon-button][color="warn"] {
+  color: #F44336;
+}
+
+button[mat-icon-button][color="warn"]:hover {
+  background-color: #FFCDD2; /* Couleur plus claire sur hover */
+}
+
+/* Tooltip - pour rendre les outils plus visibles */
+.mat-tooltip {
+  font-size: 12px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* Responsivité - rendre le tableau lisible sur mobile */
+@media (max-width: 768px) {
+  .mat-cell, .mat-header-cell {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .message-cell {
+    max-width: 150px;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
 }

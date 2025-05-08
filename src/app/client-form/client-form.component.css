@@ -1,22 +1,114 @@
+/* Conteneur principal de la carte client */
 .client-card {
-    margin: 30px auto;
-    padding: 30px;
-    max-width: 600px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.form-title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.full-width {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre du formulaire */
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3F51B5; /* Bleu Indigène */
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Style des champs du formulaire */
+  .mat-form-field {
     width: 100%;
-    margin-bottom: 20px;
-}
-
-.client-form {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Placeholder des champs */
+  .mat-label {
+    color: #3F51B5; /* Coloration des labels */
+  }
+  
+  /* Style des champs de saisie (input) */
+  input.mat-input-element {
+    font-size: 14px;
+    padding: 12px;
+  }
+  
+  /* Focus sur le champ */
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    border-color: #3F51B5; /* Bordure bleue au focus */
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    border-width: 2px;
+  }
+  
+  /* Style des boutons */
+  button[mat-raised-button] {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-transform: none;
+    min-width: 150px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[mat-raised-button][color="primary"] {
+    background-color: #3F51B5; /* Bleu pour le bouton de validation */
+    color: #fff;
+  }
+  
+  button[mat-raised-button][color="primary"]:hover {
+    background-color: #283593; /* Une nuance plus foncée sur hover */
+  }
+  
+  button[mat-raised-button][color="warn"] {
+    background-color: #FF5722; /* Couleur rouge pour le bouton retour */
+    color: #fff;
+  }
+  
+  button[mat-raised-button][color="warn"]:hover {
+    background-color: #D32F2F; /* Une nuance plus foncée sur hover */
+  }
+  
+  /* Icônes dans les boutons */
+  mat-icon {
+    margin-right: 8px;
+  }
+  
+  /* Alignement des boutons */
+  div[fxLayout="row"] {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+  
+  /* Ajout de marges et de paddings pour espacer les éléments */
+  .client-form {
     display: flex;
     flex-direction: column;
-}
+    gap: 1rem;
+  }
+  
+  /* Réduire la taille des éléments sur mobile */
+  @media (max-width: 768px) {
+    .client-card {
+      padding: 1.5rem;
+    }
+  
+    .form-title {
+      font-size: 1.5rem;
+    }
+  
+    .mat-form-field {
+      font-size: 14px;
+    }
+  
+    button[mat-raised-button] {
+      font-size: 12px;
+      padding: 8px 14px;
+    }
+  }
+  

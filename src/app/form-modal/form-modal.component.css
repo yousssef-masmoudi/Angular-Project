@@ -1,10 +1,102 @@
-.form-layout {
+/* Style global de la boîte de dialogue */
+mat-dialog-content {
+    background-color: #ffffff; /* Fond blanc pour une apparence propre et moderne */
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 500px; /* Taille de la boîte de dialogue plus compacte pour une lisibilité optimale */
+    border-radius: 12px; /* Coins arrondis pour un design doux */
+  }
+  
+  /* Titre de la boîte de dialogue */
+  mat-dialog-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #3F51B5; /* Couleur bleu de confiance */
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  /* Formulaire dans la boîte de dialogue */
+  .form-layout {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding-top: 1rem;
-}
-
-.field {
+    gap: 16px;
+  }
+  
+  /* Style des champs de saisie */
+  mat-form-field.field {
     width: 100%;
-}
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field .mat-label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  input[matInput] {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus sur les champs */
+  input[matInput]:focus {
+    border-color: #3F51B5; /* Met en surbrillance les champs en bleu lors du focus */
+    outline: none;
+  }
+  
+  /* Style pour le bouton de date */
+  mat-datepicker-toggle {
+    color: #3F51B5; /* Assurer une cohérence avec le thème de couleur bleu */
+  }
+  
+  /* Section actions : Boutons */
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f7f7f7; /* Fond gris clair pour les actions */
+    border-top: 1px solid #ececec;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+  /* Bouton "Annuler" */
+  button[mat-button] {
+    color: #f44336; /* Rouge clair pour l'action secondaire */
+    font-weight: 600;
+  }
+  
+  /* Bouton "Enregistrer" */
+  button[mat-raised-button] {
+    background-color: #3F51B5; /* Bleu pour l'action principale */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-transform: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover sur le bouton Enregistrer */
+  button[mat-raised-button]:hover {
+    background-color: #283593; /* Un bleu plus foncé pour le survol */
+  }
+  
+  /* Désactivation du bouton Enregistrer */
+  button[mat-raised-button][disabled] {
+    background-color: #B0BEC5; /* Gris clair quand désactivé */
+    color: #fff;
+  }
+  
+  /* Message d'erreur (si applicable) */
+  .mat-form-field .mat-error {
+    color: red;
+    font-size: 0.9rem;
+  }
+  
